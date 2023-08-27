@@ -33,16 +33,16 @@ namespace Airline_Management_System
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            
-            if (PhoneTb.TextLength<11)
-            {
-                PhoneTb.Text = "enter valid information";
-            }
-            else
-            {
-                PhoneTb.Text = "";
-            }
 
+            /*  if (PhoneTb.TextLength<11)
+              {
+                  PhoneTb.Text = "enter valid information";
+              }
+              else
+              {
+                  PhoneTb.Text = "";
+              }
+            */
         }
         private void label10_Click(object sender, EventArgs e)
         {
@@ -106,6 +106,18 @@ namespace Airline_Management_System
         private void NationalityCb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ViewPassengers viewpass = new ViewPassengers();
+            viewpass.Show();
+            this.Hide();
         }
     }
 }

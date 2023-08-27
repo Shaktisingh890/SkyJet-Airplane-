@@ -49,7 +49,10 @@
             PhoneTb = new TextBox();
             label10 = new Label();
             pictureBox1 = new PictureBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -57,7 +60,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(287, 62);
+            label2.Location = new Point(289, 81);
             label2.Name = "label2";
             label2.Size = new Size(278, 37);
             label2.TabIndex = 7;
@@ -68,7 +71,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(318, 25);
+            label1.Location = new Point(318, 44);
             label1.Name = "label1";
             label1.Size = new Size(215, 37);
             label1.TabIndex = 6;
@@ -241,7 +244,7 @@
             // 
             PhoneTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             PhoneTb.Location = new Point(262, 499);
-            PhoneTb.MaxLength = 10;
+            PhoneTb.MaxLength = 20;
             PhoneTb.Multiline = true;
             PhoneTb.Name = "PhoneTb";
             PhoneTb.Size = new Size(195, 34);
@@ -253,7 +256,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.Red;
-            label10.Location = new Point(846, -1);
+            label10.Location = new Point(3, 0);
             label10.Name = "label10";
             label10.Size = new Size(34, 34);
             label10.TabIndex = 34;
@@ -270,13 +273,38 @@
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.Navy;
+            flowLayoutPanel1.Controls.Add(label10);
+            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(879, 41);
+            flowLayoutPanel1.TabIndex = 36;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Navy;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Location = new Point(235, 677);
+            button3.Name = "button3";
+            button3.Size = new Size(204, 35);
+            button3.TabIndex = 37;
+            button3.Text = "ViewPassengers";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // AddPassenger
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(879, 749);
+            Controls.Add(button3);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(pictureBox1);
-            Controls.Add(label10);
             Controls.Add(PhoneTb);
             Controls.Add(PassId);
             Controls.Add(PassName);
@@ -301,6 +329,8 @@
             Text = "AddPassenger";
             Load += AddPassenger_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -327,5 +357,7 @@
         private TextBox PhoneTb;
         private Label label10;
         private PictureBox pictureBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Button button3;
     }
 }
