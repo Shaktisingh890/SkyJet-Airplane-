@@ -1,6 +1,6 @@
 ﻿namespace Airline_Management_System
 {
-    partial class FllightTblcs
+    partial class FlightTbl
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,22 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            FCode = new TextBox();
             label3 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            SeatNum = new TextBox();
+            FSrc = new ComboBox();
+            FDest = new ComboBox();
             button2 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            FDate = new DateTimePicker();
             label4 = new Label();
+            panel2 = new Panel();
+            panel1 = new Panel();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -68,15 +71,15 @@
             label2.TabIndex = 4;
             label2.Text = "Record New Flights";
             // 
-            // textBox2
+            // FCode
             // 
-            textBox2.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(247, 221);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(195, 34);
-            textBox2.TabIndex = 10;
-            textBox2.TextChanged += textBox2_TextChanged;
+            FCode.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            FCode.Location = new Point(247, 221);
+            FCode.Multiline = true;
+            FCode.Name = "FCode";
+            FCode.Size = new Size(195, 34);
+            FCode.TabIndex = 10;
+            FCode.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
@@ -97,9 +100,9 @@
             label5.ForeColor = Color.MidnightBlue;
             label5.Location = new Point(74, 340);
             label5.Name = "label5";
-            label5.Size = new Size(140, 27);
+            label5.Size = new Size(137, 27);
             label5.TabIndex = 13;
-            label5.Text = "Flight Code";
+            label5.Text = "Destination";
             label5.Click += label5_Click;
             // 
             // label6
@@ -114,33 +117,37 @@
             label6.Text = "Source";
             label6.Click += label6_Click;
             // 
-            // textBox1
+            // SeatNum
             // 
-            textBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(247, 447);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 34);
-            textBox1.TabIndex = 15;
-            textBox1.TextChanged += textBox1_TextChanged;
+            SeatNum.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            SeatNum.Location = new Point(247, 447);
+            SeatNum.Multiline = true;
+            SeatNum.Name = "SeatNum";
+            SeatNum.Size = new Size(201, 34);
+            SeatNum.TabIndex = 15;
+            SeatNum.TextChanged += textBox1_TextChanged;
             // 
-            // comboBox1
+            // FSrc
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(247, 286);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 28);
-            comboBox1.TabIndex = 16;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            FSrc.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FSrc.FormattingEnabled = true;
+            FSrc.Items.AddRange(new object[] { "Benglore", "Mumbai", "Chennai", "Delhi", "Dubai", "Jaipur", "Madrid", "NewYork", "Beejing" });
+            FSrc.Location = new Point(247, 286);
+            FSrc.Name = "FSrc";
+            FSrc.Size = new Size(195, 31);
+            FSrc.TabIndex = 16;
+            FSrc.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // comboBox2
+            // FDest
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(247, 340);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(195, 28);
-            comboBox2.TabIndex = 17;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            FDest.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FDest.FormattingEnabled = true;
+            FDest.Items.AddRange(new object[] { "Benglore", "Mumbai", "Chennai", "Delhi", "Dubai", "Jaipur", "Madrid", "NewYork", "Beejing" });
+            FDest.Location = new Point(247, 340);
+            FDest.Name = "FDest";
+            FDest.Size = new Size(195, 31);
+            FDest.TabIndex = 17;
+            FDest.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // button2
             // 
@@ -148,12 +155,13 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(259, 537);
+            button2.Location = new Point(350, 537);
             button2.Name = "button2";
             button2.Size = new Size(124, 35);
             button2.TabIndex = 19;
             button2.Text = "Reset";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -161,7 +169,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(114, 537);
+            button1.Location = new Point(158, 537);
             button1.Name = "button1";
             button1.Size = new Size(124, 35);
             button1.TabIndex = 18;
@@ -191,14 +199,14 @@
             label7.Text = "TakeofDate";
             label7.Click += label7_Click;
             // 
-            // dateTimePicker1
+            // FDate
             // 
-            dateTimePicker1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(247, 399);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(201, 36);
-            dateTimePicker1.TabIndex = 22;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            FDate.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FDate.Location = new Point(247, 399);
+            FDate.Name = "FDate";
+            FDate.Size = new Size(201, 32);
+            FDate.TabIndex = 22;
+            FDate.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label4
             // 
@@ -212,28 +220,63 @@
             label4.Text = "Num Of Seats";
             label4.Click += label4_Click;
             // 
-            // FllightTblcs
+            // panel2
+            // 
+            panel2.BackColor = Color.Red;
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(834, 26);
+            panel2.TabIndex = 59;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Navy;
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 677);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(834, 24);
+            panel1.TabIndex = 60;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Navy;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Location = new Point(247, 596);
+            button3.Name = "button3";
+            button3.Size = new Size(124, 35);
+            button3.TabIndex = 61;
+            button3.Text = "View";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // FlightTbl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(834, 701);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(button3);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
+            Controls.Add(FDate);
             Controls.Add(label7);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            Controls.Add(FDest);
+            Controls.Add(FSrc);
+            Controls.Add(SeatNum);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(FCode);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FllightTblcs";
+            Name = "FlightTbl";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FllightTblcs";
             Load += FllightTblcs_Load;
@@ -246,18 +289,21 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox FCode;
         private Label label3;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private TextBox SeatNum;
+        private ComboBox FSrc;
+        private ComboBox FDest;
         private Button button2;
         private Button button1;
         private PictureBox pictureBox1;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker FDate;
         private Label label4;
+        private Panel panel2;
+        private Panel panel1;
+        private Button button3;
     }
 }

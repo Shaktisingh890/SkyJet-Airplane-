@@ -51,9 +51,9 @@
             label1.ForeColor = Color.Red;
             label1.Location = new Point(278, 9);
             label1.Name = "label1";
-            label1.Size = new Size(232, 34);
+            label1.Size = new Size(203, 34);
             label1.TabIndex = 2;
-            label1.Text = "Sky Jet Airplane";
+            label1.Text = "Sky Jet Airline";
             label1.Click += label1_Click;
             // 
             // Myprogress
@@ -63,7 +63,7 @@
             Myprogress.Size = new Size(802, 21);
             Myprogress.TabIndex = 4;
             // 
-            // Form1
+            // Splash
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -73,7 +73,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "Splash";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Airline Mangememet System";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

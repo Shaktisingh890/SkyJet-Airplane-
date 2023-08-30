@@ -35,21 +35,23 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            PNameTb = new TextBox();
+            TIdTb = new TextBox();
+            FCodeCb = new ComboBox();
+            PIdCb = new ComboBox();
             label8 = new Label();
-            textBox4 = new TextBox();
+            PPassTb = new TextBox();
             label9 = new Label();
-            textBox5 = new TextBox();
             label10 = new Label();
-            textBox6 = new TextBox();
+            PAmtTb = new TextBox();
             label11 = new Label();
             label12 = new Label();
-            dataGridView1 = new DataGridView();
-            textBox2 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            TicketDGV = new DataGridView();
+            PNatTb = new TextBox();
+            button4 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)TicketDGV).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -57,7 +59,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(276, 58);
+            label2.Location = new Point(325, 67);
             label2.Name = "label2";
             label2.Size = new Size(226, 37);
             label2.TabIndex = 10;
@@ -68,11 +70,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(276, 21);
+            label1.Location = new Point(325, 21);
             label1.Name = "label1";
             label1.Size = new Size(215, 37);
             label1.TabIndex = 11;
             label1.Text = "Sky Jet Airline";
+            label1.Click += label1_Click;
             // 
             // label4
             // 
@@ -129,39 +132,45 @@
             label7.TabIndex = 44;
             label7.Text = "FlightCode";
             // 
-            // textBox1
+            // PNameTb
             // 
-            textBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(533, 175);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(195, 34);
-            textBox1.TabIndex = 45;
+            PNameTb.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            PNameTb.Location = new Point(533, 175);
+            PNameTb.Multiline = true;
+            PNameTb.Name = "PNameTb";
+            PNameTb.Size = new Size(195, 34);
+            PNameTb.TabIndex = 45;
+            PNameTb.TextAlign = HorizontalAlignment.Right;
+            PNameTb.TextChanged += PNameTb_TextChanged;
             // 
-            // textBox3
+            // TIdTb
             // 
-            textBox3.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(192, 128);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(195, 34);
-            textBox3.TabIndex = 47;
+            TIdTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TIdTb.Location = new Point(192, 128);
+            TIdTb.Multiline = true;
+            TIdTb.Name = "TIdTb";
+            TIdTb.Size = new Size(195, 34);
+            TIdTb.TabIndex = 47;
             // 
-            // comboBox1
+            // FCodeCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(532, 128);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 28);
-            comboBox1.TabIndex = 49;
+            FCodeCb.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            FCodeCb.FormattingEnabled = true;
+            FCodeCb.Location = new Point(532, 128);
+            FCodeCb.Name = "FCodeCb";
+            FCodeCb.Size = new Size(195, 31);
+            FCodeCb.TabIndex = 49;
             // 
-            // comboBox2
+            // PIdCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(192, 185);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(195, 28);
-            comboBox2.TabIndex = 50;
+            PIdCb.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            PIdCb.FormattingEnabled = true;
+            PIdCb.Location = new Point(192, 185);
+            PIdCb.Name = "PIdCb";
+            PIdCb.Size = new Size(195, 31);
+            PIdCb.TabIndex = 50;
+            PIdCb.SelectedIndexChanged += PIdCb_SelectedIndexChanged;
+            PIdCb.SelectionChangeCommitted += PIdCb_SelectionChangeCommitted;
             // 
             // label8
             // 
@@ -174,14 +183,16 @@
             label8.TabIndex = 52;
             label8.Text = "Nationality";
             // 
-            // textBox4
+            // PPassTb
             // 
-            textBox4.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.Location = new Point(192, 230);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(195, 34);
-            textBox4.TabIndex = 53;
+            PPassTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            PPassTb.Location = new Point(192, 230);
+            PPassTb.Multiline = true;
+            PPassTb.Name = "PPassTb";
+            PPassTb.Size = new Size(195, 34);
+            PPassTb.TabIndex = 53;
+            PPassTb.TextAlign = HorizontalAlignment.Right;
+            PPassTb.TextChanged += PPassTb_TextChanged;
             // 
             // label9
             // 
@@ -190,45 +201,36 @@
             label9.ForeColor = Color.MidnightBlue;
             label9.Location = new Point(41, 287);
             label9.Name = "label9";
-            label9.Size = new Size(59, 27);
+            label9.Size = new Size(0, 27);
             label9.TabIndex = 54;
-            label9.Text = "Age";
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox5.Location = new Point(192, 287);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(195, 34);
-            textBox5.TabIndex = 55;
+            label9.Click += label9_Click;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.MidnightBlue;
-            label10.Location = new Point(393, 287);
+            label10.Location = new Point(286, 298);
             label10.Name = "label10";
             label10.Size = new Size(101, 27);
             label10.TabIndex = 56;
             label10.Text = "Amount";
             // 
-            // textBox6
+            // PAmtTb
             // 
-            textBox6.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox6.Location = new Point(533, 284);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(195, 34);
-            textBox6.TabIndex = 57;
+            PAmtTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            PAmtTb.Location = new Point(402, 287);
+            PAmtTb.Multiline = true;
+            PAmtTb.Name = "PAmtTb";
+            PAmtTb.Size = new Size(195, 34);
+            PAmtTb.TabIndex = 57;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = Color.Red;
-            label11.Location = new Point(767, 0);
+            label11.Location = new Point(945, -1);
             label11.Name = "label11";
             label11.Size = new Size(34, 34);
             label11.TabIndex = 58;
@@ -240,51 +242,96 @@
             label12.AutoSize = true;
             label12.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label12.ForeColor = Color.Red;
-            label12.Location = new Point(282, 348);
+            label12.Location = new Point(357, 403);
             label12.Name = "label12";
-            label12.Size = new Size(212, 34);
+            label12.Size = new Size(145, 34);
             label12.TabIndex = 59;
-            label12.Text = "Ticket Booking";
+            label12.Text = " Bookings";
             // 
-            // dataGridView1
+            // TicketDGV
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-1, 415);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(802, 300);
-            dataGridView1.TabIndex = 60;
+            TicketDGV.BackgroundColor = SystemColors.ButtonHighlight;
+            TicketDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TicketDGV.Location = new Point(18, 449);
+            TicketDGV.Name = "TicketDGV";
+            TicketDGV.RowHeadersWidth = 51;
+            TicketDGV.RowTemplate.Height = 29;
+            TicketDGV.Size = new Size(949, 300);
+            TicketDGV.TabIndex = 60;
             // 
-            // textBox2
+            // PNatTb
             // 
-            textBox2.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(532, 230);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(195, 34);
-            textBox2.TabIndex = 61;
+            PNatTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            PNatTb.Location = new Point(532, 230);
+            PNatTb.Multiline = true;
+            PNatTb.Name = "PNatTb";
+            PNatTb.Size = new Size(195, 34);
+            PNatTb.TabIndex = 61;
+            PNatTb.TextAlign = HorizontalAlignment.Right;
+            PNatTb.TextChanged += PNatTb_TextChanged;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Navy;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(581, 345);
+            button4.Name = "button4";
+            button4.Size = new Size(124, 35);
+            button4.TabIndex = 65;
+            button4.Text = "Back";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Navy;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(402, 345);
+            button2.Name = "button2";
+            button2.Size = new Size(124, 35);
+            button2.TabIndex = 63;
+            button2.Text = "Reset";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Navy;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(192, 345);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 35);
+            button1.TabIndex = 62;
+            button1.Text = "Book";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Ticket
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 715);
-            Controls.Add(textBox2);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(979, 761);
+            Controls.Add(button4);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(PNatTb);
+            Controls.Add(TicketDGV);
             Controls.Add(label12);
             Controls.Add(label11);
-            Controls.Add(textBox6);
+            Controls.Add(PAmtTb);
             Controls.Add(label10);
-            Controls.Add(textBox5);
             Controls.Add(label9);
-            Controls.Add(textBox4);
+            Controls.Add(PPassTb);
             Controls.Add(label8);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
+            Controls.Add(PIdCb);
+            Controls.Add(FCodeCb);
+            Controls.Add(TIdTb);
+            Controls.Add(PNameTb);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -297,7 +344,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ticket";
             Load += Ticket_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TicketDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,19 +358,21 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private TextBox PNameTb;
+        private TextBox TIdTb;
+        private ComboBox FCodeCb;
+        private ComboBox PIdCb;
         private Label label8;
-        private TextBox textBox4;
+        private TextBox PPassTb;
         private Label label9;
-        private TextBox textBox5;
         private Label label10;
-        private TextBox textBox6;
+        private TextBox PAmtTb;
         private Label label11;
         private Label label12;
-        private DataGridView dataGridView1;
-        private TextBox textBox2;
+        private DataGridView TicketDGV;
+        private TextBox PNatTb;
+        private Button button4;
+        private Button button2;
+        private Button button1;
     }
 }

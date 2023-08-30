@@ -1,6 +1,6 @@
 ﻿namespace Airline_Management_System
 {
-    partial class ViewFlightscs
+    partial class ViewFlights
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             label4 = new Label();
@@ -36,17 +40,17 @@
             label5 = new Label();
             label3 = new Label();
             label8 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            dataGridView1 = new DataGridView();
+            FDate = new DateTimePicker();
+            FDestCb = new ComboBox();
+            FSrcCb = new ComboBox();
+            SeatNum = new TextBox();
+            FCodeTb = new TextBox();
+            FlightDGV = new DataGridView();
             button2 = new Button();
             button1 = new Button();
             button3 = new Button();
             button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FlightDGV).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -137,61 +141,86 @@
             label8.TabIndex = 22;
             label8.Text = "Flight Code";
             // 
-            // dateTimePicker1
+            // FDate
             // 
-            dateTimePicker1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(207, 205);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(201, 36);
-            dateTimePicker1.TabIndex = 32;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            FDate.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            FDate.Location = new Point(207, 205);
+            FDate.Name = "FDate";
+            FDate.Size = new Size(201, 36);
+            FDate.TabIndex = 32;
+            FDate.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // comboBox2
+            // FDestCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(595, 213);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(195, 28);
-            comboBox2.TabIndex = 31;
+            FDestCb.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            FDestCb.FormattingEnabled = true;
+            FDestCb.Items.AddRange(new object[] { "Benglore", "Mumbai", "Chennai", "Delhi", "Dubai", "Jaipur", "Madrid", "NewYork", "Beejing" });
+            FDestCb.Location = new Point(584, 217);
+            FDestCb.Name = "FDestCb";
+            FDestCb.Size = new Size(195, 31);
+            FDestCb.TabIndex = 31;
             // 
-            // comboBox1
+            // FSrcCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(595, 147);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 28);
-            comboBox1.TabIndex = 30;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            FSrcCb.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            FSrcCb.FormattingEnabled = true;
+            FSrcCb.Items.AddRange(new object[] { "Benglore", "Mumbai", "Chennai", "Delhi", "Dubai", "Jaipur", "Madrid", "NewYork", "Beejing" });
+            FSrcCb.Location = new Point(595, 147);
+            FSrcCb.Name = "FSrcCb";
+            FSrcCb.Size = new Size(195, 31);
+            FSrcCb.TabIndex = 30;
+            FSrcCb.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // textBox1
+            // SeatNum
             // 
-            textBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(364, 287);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 34);
-            textBox1.TabIndex = 29;
+            SeatNum.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            SeatNum.Location = new Point(364, 287);
+            SeatNum.Multiline = true;
+            SeatNum.Name = "SeatNum";
+            SeatNum.Size = new Size(201, 34);
+            SeatNum.TabIndex = 29;
             // 
-            // textBox2
+            // FCodeTb
             // 
-            textBox2.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(207, 141);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(195, 34);
-            textBox2.TabIndex = 28;
+            FCodeTb.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            FCodeTb.Location = new Point(207, 141);
+            FCodeTb.Multiline = true;
+            FCodeTb.Name = "FCodeTb";
+            FCodeTb.Size = new Size(195, 34);
+            FCodeTb.TabIndex = 28;
             // 
-            // dataGridView1
+            // FlightDGV
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 409);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(779, 288);
-            dataGridView1.TabIndex = 33;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(128, 255, 128);
+            FlightDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            FlightDGV.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.IndianRed;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            FlightDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            FlightDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            FlightDGV.GridColor = SystemColors.ActiveCaption;
+            FlightDGV.Location = new Point(12, 409);
+            FlightDGV.Name = "FlightDGV";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.DarkGreen;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.GrayText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            FlightDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            FlightDGV.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 0, 192);
+            FlightDGV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            FlightDGV.RowTemplate.Height = 29;
+            FlightDGV.Size = new Size(779, 288);
+            FlightDGV.TabIndex = 33;
+            FlightDGV.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button2
             // 
@@ -205,6 +234,7 @@
             button2.TabIndex = 35;
             button2.Text = "Reset";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -218,6 +248,7 @@
             button1.TabIndex = 34;
             button1.Text = "Update";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -231,6 +262,7 @@
             button3.TabIndex = 36;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -244,8 +276,9 @@
             button4.TabIndex = 37;
             button4.Text = "Back";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
-            // ViewFlightscs
+            // ViewFlights
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -254,12 +287,12 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
-            Controls.Add(textBox2);
+            Controls.Add(FlightDGV);
+            Controls.Add(FDate);
+            Controls.Add(FDestCb);
+            Controls.Add(FSrcCb);
+            Controls.Add(SeatNum);
+            Controls.Add(FCodeTb);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -269,10 +302,11 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ViewFlightscs";
+            Name = "ViewFlights";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewFlightscs";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ViewFlightscs_Load;
+            ((System.ComponentModel.ISupportInitialize)FlightDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -287,12 +321,12 @@
         private Label label5;
         private Label label3;
         private Label label8;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private DataGridView dataGridView1;
+        private DateTimePicker FDate;
+        private ComboBox FDestCb;
+        private ComboBox FSrcCb;
+        private TextBox SeatNum;
+        private TextBox FCodeTb;
+        private DataGridView FlightDGV;
         private Button button2;
         private Button button1;
         private Button button3;

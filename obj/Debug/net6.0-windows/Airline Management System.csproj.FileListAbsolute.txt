@@ -12,13 +12,13 @@ C:\Users\shakt\source\repos\Airline Management System\bin\Debug\net6.0-windows\r
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline Management System.csproj.AssemblyReference.cache
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System..resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.AddPassenger.resources
-C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.CancellationTblcs.resources
-C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.FllightTblcs.resources
+C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.CancellationTbl.resources
+C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.FlightTbl.resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.Login.resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.Properties.Resources.resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.Splash.resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.Ticket.resources
-C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.ViewFlightscs.resources
+C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.ViewFlights.resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline_Management_System.ViewPassengers.resources
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline Management System.csproj.GenerateResource.cache
 C:\Users\shakt\source\repos\Airline Management System\obj\Debug\net6.0-windows\Airline Management System.GeneratedMSBuildEditorConfig.editorconfig

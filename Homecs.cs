@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace Airline_Management_System
 {
-    public partial class CancellationTblcs : Form
+    public partial class Homecs : Form
     {
-        public CancellationTblcs()
+        public Homecs()
         {
             InitializeComponent();
         }
 
-        private void CancellationTblcs_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
     }
 }
