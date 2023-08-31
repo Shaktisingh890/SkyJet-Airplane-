@@ -51,6 +51,7 @@
             pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -182,7 +183,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(344, 618);
+            button2.Location = new Point(318, 608);
             button2.Name = "button2";
             button2.Size = new Size(124, 35);
             button2.TabIndex = 22;
@@ -195,7 +196,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(199, 618);
+            button1.Location = new Point(155, 608);
             button1.Name = "button1";
             button1.Size = new Size(124, 35);
             button1.TabIndex = 21;
@@ -289,7 +290,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(235, 677);
+            button3.Location = new Point(262, 665);
             button3.Name = "button3";
             button3.Size = new Size(204, 35);
             button3.TabIndex = 37;
@@ -297,11 +298,26 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Navy;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(485, 608);
+            button4.Name = "button4";
+            button4.Size = new Size(124, 35);
+            button4.TabIndex = 38;
+            button4.Text = "Back";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // AddPassenger
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(879, 749);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(pictureBox1);
@@ -359,5 +375,6 @@
         private PictureBox pictureBox1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button3;
+        private Button button4;
     }
 }

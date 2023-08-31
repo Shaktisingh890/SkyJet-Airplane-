@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panel1 = new Panel();
             label5 = new Label();
             label6 = new Label();
@@ -37,15 +38,18 @@
             label3 = new Label();
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            UserIdTb = new TextBox();
+            PasswordTb = new TextBox();
             label7 = new Label();
+            label8 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.HotTrack;
+            panel1.BackColor = Color.Navy;
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label4);
@@ -103,11 +107,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Century Gothic", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(361, 33);
+            label2.Location = new Point(335, 9);
             label2.Name = "label2";
-            label2.Size = new Size(232, 34);
+            label2.Size = new Size(304, 44);
             label2.TabIndex = 4;
             label2.Text = "Sky Jet Airplane";
             // 
@@ -125,50 +129,51 @@
             // 
             // button1
             // 
-            button1.BackColor = SystemColors.Highlight;
+            button1.BackColor = Color.Navy;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.Red;
+            button1.ForeColor = Color.White;
             button1.Location = new Point(345, 398);
             button1.Name = "button1";
             button1.Size = new Size(124, 35);
             button1.TabIndex = 6;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.Highlight;
+            button2.BackColor = Color.Navy;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Red;
+            button2.ForeColor = Color.White;
             button2.Location = new Point(490, 398);
             button2.Name = "button2";
             button2.Size = new Size(124, 35);
             button2.TabIndex = 7;
             button2.Text = "Reset";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // textBox1
+            // UserIdTb
             // 
-            textBox1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(423, 200);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
-            textBox1.PlaceholderText = "Enter your user Id";
-            textBox1.Size = new Size(201, 34);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            UserIdTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            UserIdTb.Location = new Point(423, 200);
+            UserIdTb.Multiline = true;
+            UserIdTb.Name = "UserIdTb";
+            UserIdTb.Size = new Size(201, 34);
+            UserIdTb.TabIndex = 8;
+            UserIdTb.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // PasswordTb
             // 
-            textBox2.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(423, 265);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(201, 34);
-            textBox2.TabIndex = 9;
+            PasswordTb.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            PasswordTb.Location = new Point(423, 265);
+            PasswordTb.Multiline = true;
+            PasswordTb.Name = "PasswordTb";
+            PasswordTb.PasswordChar = '*';
+            PasswordTb.Size = new Size(201, 34);
+            PasswordTb.TabIndex = 9;
             // 
             // label7
             // 
@@ -182,14 +187,37 @@
             label7.Text = "X";
             label7.Click += label7_Click;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 16.2F, FontStyle.Italic, GraphicsUnit.Point);
+            label8.ForeColor = Color.Red;
+            label8.Location = new Point(381, 505);
+            label8.Name = "label8";
+            label8.Size = new Size(195, 34);
+            label8.TabIndex = 12;
+            label8.Text = "GLA CODERS";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(423, 69);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(95, 86);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(722, 548);
+            Controls.Add(pictureBox1);
+            Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(PasswordTb);
+            Controls.Add(UserIdTb);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -198,10 +226,12 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,8 +247,10 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox UserIdTb;
+        private TextBox PasswordTb;
         private Label label7;
+        private Label label8;
+        private PictureBox pictureBox1;
     }
 }

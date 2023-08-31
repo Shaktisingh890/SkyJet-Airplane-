@@ -46,6 +46,7 @@
             panel2 = new Panel();
             panel1 = new Panel();
             button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(259, 21);
+            label1.Location = new Point(281, 32);
             label1.Name = "label1";
             label1.Size = new Size(215, 37);
             label1.TabIndex = 3;
@@ -65,7 +66,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(221, 69);
+            label2.Location = new Point(251, 69);
             label2.Name = "label2";
             label2.Size = new Size(290, 37);
             label2.TabIndex = 4;
@@ -155,7 +156,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(350, 537);
+            button2.Location = new Point(408, 547);
             button2.Name = "button2";
             button2.Size = new Size(124, 35);
             button2.TabIndex = 19;
@@ -169,7 +170,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(158, 537);
+            button1.Location = new Point(77, 547);
             button1.Name = "button1";
             button1.Size = new Size(124, 35);
             button1.TabIndex = 18;
@@ -180,9 +181,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.aeroplane2;
-            pictureBox1.Location = new Point(454, 181);
+            pictureBox1.Location = new Point(454, 197);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(377, 279);
+            pictureBox1.Size = new Size(377, 311);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 20;
             pictureBox1.TabStop = false;
@@ -244,7 +245,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(247, 596);
+            button3.Location = new Point(247, 547);
             button3.Name = "button3";
             button3.Size = new Size(124, 35);
             button3.TabIndex = 61;
@@ -252,11 +253,26 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Navy;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(568, 547);
+            button4.Name = "button4";
+            button4.Size = new Size(124, 35);
+            button4.TabIndex = 62;
+            button4.Text = "Back";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // FlightTbl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(834, 701);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(panel1);
             Controls.Add(panel2);
@@ -305,5 +321,6 @@
         private Panel panel2;
         private Panel panel1;
         private Button button3;
+        private Button button4;
     }
 }

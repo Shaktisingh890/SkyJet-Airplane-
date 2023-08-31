@@ -46,5 +46,30 @@ namespace Airline_Management_System
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserIdTb.Text = "";
+            PasswordTb.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (UserIdTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("!!!Enter the User Name and Password First");
+            }
+            else if (UserIdTb.Text == "Admin" && PasswordTb.Text == "Admin")
+            {
+                Home home = new Home();
+                home.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("!!Wrong User Name or Password");
+            }
+        }
     }
 }

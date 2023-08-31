@@ -73,6 +73,26 @@ namespace Airline_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap airplane_307909_1280 {
+            get {
+                object obj = ResourceManager.GetObject("airplane-307909_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap airplane_309386_1280 {
+            get {
+                object obj = ResourceManager.GetObject("airplane-309386_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap airplane_pic {
             get {
                 object obj = ResourceManager.GetObject("airplane_pic", resourceCulture);

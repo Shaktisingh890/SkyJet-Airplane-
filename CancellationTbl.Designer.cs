@@ -183,6 +183,7 @@
             button4.TabIndex = 80;
             button4.Text = "Back";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
@@ -196,6 +197,7 @@
             button2.TabIndex = 79;
             button2.Text = "Clear";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 

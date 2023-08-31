@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             Myprogress = new ProgressBar();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -63,11 +65,15 @@
             Myprogress.Size = new Size(802, 21);
             Myprogress.TabIndex = 4;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // Splash
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
             Controls.Add(Myprogress);
             Controls.Add(label1);
@@ -76,6 +82,7 @@
             Name = "Splash";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Airline Mangememet System";
+            Load += Splash_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -85,5 +92,6 @@
         private PictureBox pictureBox2;
         private Label label1;
         private ProgressBar Myprogress;
+        private System.Windows.Forms.Timer timer1;
     }
 }

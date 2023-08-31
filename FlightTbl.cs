@@ -105,8 +105,15 @@ namespace Airline_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ViewFlights v1= new ViewFlights();
+            ViewFlights v1 = new ViewFlights();
             v1.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Home h1 = new Home();
+            h1.Show();
             this.Hide();
         }
     }

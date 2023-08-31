@@ -132,9 +132,9 @@ namespace Airline_Management_System
             {
                 MessageBox.Show(ex.Message);
             }
-                
 
-            
+
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -173,5 +173,20 @@ namespace Airline_Management_System
         private void FCodeTb_TextChanged(object sender, EventArgs e)
         {
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CIdTb.Text = "";
+            TIdCb.SelectedIndex = -1;
+            FCodeTb.Text = "";
+        }
     }
 }
+
